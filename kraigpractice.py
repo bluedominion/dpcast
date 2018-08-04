@@ -10,11 +10,11 @@ window.title("Welcome to Kraig's app")
 
 window.geometry('350x200')
 
-def clicked():
-    messagebox.showinfo('Message Title','Message Content')
-
-btn = Button(window,text='Touch Me!', command=clicked)
-btn.grid(column=0, row=0)
+#Pop-up message box
+#def clicked():
+#    messagebox.showinfo('Message Title','Message Content')
+#btn = Button(window,text='Touch Me!', command=clicked)
+#btn.grid(column=0, row=0)
 
 #Scrolling text box
 #txt=scrolledtext.ScrolledText(window, width=40, height=10)
