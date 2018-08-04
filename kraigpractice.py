@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 from tkinter import *
 from tkinter.ttk import *
+from tkinter import scrolledtext
+from tkinter import messagebox
 
 window = Tk()
 
@@ -8,18 +10,29 @@ window.title("Welcome to Kraig's app")
 
 window.geometry('350x200')
 
-selected = IntVar()
-rad1 = Radiobutton(window, text="Ellen", value=1, variable=selected)
-rad2 = Radiobutton(window, text="Kraid", value=2, variable=selected)
-rad3 = Radiobutton(window, text="Dita", value=3, variable=selected)
-rad1.grid(column=0, row=0)
-rad2.grid(column=1, row=0)
-rad3.grid(column=2, row=0)
-
 def clicked():
-    print(str(selected.get())+" touched me!")
-btn = Button(window, text="Touch me!", command=clicked)
-btn.grid(column=3, row=0)
+    messagebox.showinfo('Message Title','Message Content')
+
+btn = Button(window,text='Touch Me!', command=clicked)
+btn.grid(column=0, row=0)
+
+#Scrolling text box
+#txt=scrolledtext.ScrolledText(window, width=40, height=10)
+#txt.grid(column=0, row=0)
+
+#Radio button silliness
+#selected = IntVar()
+#rad1 = Radiobutton(window, text="Ellen", value=1, variable=selected)
+#rad2 = Radiobutton(window, text="Kraid", value=2, variable=selected)
+#rad3 = Radiobutton(window, text="Dita", value=3, variable=selected)
+#rad1.grid(column=0, row=0)
+#rad2.grid(column=1, row=0)
+#rad3.grid(column=2, row=0)
+
+#def clicked():
+#    print(str(selected.get())+" touched me!")
+#btn = Button(window, text="Touch me!", command=clicked)
+#btn.grid(column=3, row=0)
 
 #check buttons!
 #chk_state = BooleanVar()
